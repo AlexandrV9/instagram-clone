@@ -1,19 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import firebase from 'firebase';
 
 function App() {
-
-  const getAllCards = () => {
-    return firebase
-    .database()
-    .ref(`users/O4jpwH2Fy0dFhg09iRhjkJYHr3C3/cards`)
-    .once('value')
-    .then(snapshot => snapshot.val())
-    .catch(err => console.log(err));
-  }
-
-  console.log(getAllCards());
 
   return (
     <div className="App">
